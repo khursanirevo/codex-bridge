@@ -53,7 +53,7 @@ For a series of edits, chain them one at a time (each output becomes the next
 2. **Verify by viewing.** Read the output PNG with the Read tool and compare
    against the request before reporting done. Regenerate with a sharper prompt if
    the model drifted — at most 2 retries.
-3. **Use a Bash timeout of at least 300000 ms** (5 minutes).
+3. **Use a Bash timeout of at least 300000 ms** (5 minutes). The wrapper itself aborts at 900s by default (`--timeout` flag or `CODEX_IMAGEGEN_TIMEOUT` env to change).
 4. **For a transparent result**, regenerate the subject on a flat `#00FF00`
    background (`#FF00FF` if the subject is green) and strip the key with the
    helper Codex ships:

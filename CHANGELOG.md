@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.3 - 2026-09-22
+
+- codex-imagegen: default timeout raised 600s -> 900s; configurable via `--timeout` (documented) or `CODEX_IMAGEGEN_TIMEOUT` env.
+- generate-image/edit-image SKILL.md: document the wrapper timeout flag.
 ## 1.1.2
 
 Two blocking bugs, both found by actually running the wrappers against codex-cli 0.146.0.

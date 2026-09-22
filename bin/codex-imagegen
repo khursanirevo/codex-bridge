@@ -12,7 +12,7 @@
 #   --ref <file>      Source/reference image. Repeatable (max 4). Passing a --ref
 #                     turns this into an EDIT: describe the change in the prompt.
 #   --model <name>    Model override passed to codex
-#   --timeout <sec>   Abort after N seconds (default: 600)
+#   --timeout <sec>   Abort after N seconds (default: 900, override with CODEX_IMAGEGEN_TIMEOUT env)
 #
 # Examples:
 #   codex-imagegen "flat vector rocket icon, blue #2563EB, minimal" ./rocket.png
@@ -40,7 +40,7 @@ PROMPT="$1"; shift
 OUTPUT="$1"; shift
 SIZE=""
 MODEL=""
-TIMEOUT=600
+TIMEOUT="${CODEX_IMAGEGEN_TIMEOUT:-900}"
 REFS=()
 
 while [ $# -gt 0 ]; do

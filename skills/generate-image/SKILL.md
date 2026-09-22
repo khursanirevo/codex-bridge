@@ -51,7 +51,7 @@ Omit `--size` unless the aspect ratio actually matters; square is fastest.
    repeat an identical style sentence in every prompt so they match.
 2. **Sensible output path.** Inside a project, use its asset directory (`assets/`,
    `public/`, `static/`). Otherwise the current directory. Always `.png`.
-3. **Bash timeout ≥ 300000 ms** (5 minutes) — generation takes 1–4 minutes.
+3. **Bash timeout ≥ 300000 ms** (5 minutes) — generation takes 1–4 minutes. The wrapper itself aborts at 900s by default (`--timeout` flag or `CODEX_IMAGEGEN_TIMEOUT` env to change).
 4. **Verify by viewing.** Read the output PNG and check it against the request
    before reporting done; refine and regenerate if it missed — at most 2 retries.
 5. **Never invent a brand.** If the user has a logo, palette, or existing assets,
